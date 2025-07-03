@@ -31,6 +31,8 @@ export default async function Home() {
     const sortedBlogDetail = blogDetailData?.data?.data?.sort(
       (a, b) => b.id - a.id
     );
+    console.log('sortedBlogDetail', sortedBlogDetail);
+    console.log('companyLogo', companyLogo);
     return (
       <div className={css.landingContainer}>
         <HeroBanner />

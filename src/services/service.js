@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const http = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_BASE_URL,
+  baseURL:"https://api.icodestaging.in/api"
 });
 
 http.interceptors.request.use(

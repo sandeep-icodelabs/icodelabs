@@ -4,9 +4,8 @@ import css from './ios.module.css';
 import bannerImage from '../../assets/images/ios/iosBannerImage.png';
 import ContentWidth from '@/component/ContentWidth/ContentWidth';
 import CompaniesSlider from '@/component/CompaniesSlider/SectionAIDevelopmentPartner';
-import WeOfferIos from './WeOfferIos';
-import Testimonial from '../flutter/testimonial';
-import RecentWork from '../flutter/recentWork';
+import WeOfferIos from './WeOfferIos'; 
+// import RecentWork from '../flutter/recentWork';
 
 
 const page = () => {
@@ -32,8 +31,8 @@ const page = () => {
             </ContentWidth>
             {/* <CompaniesSlider /> */}
             <WeOfferIos/>
-            <RecentWork/>
-            <Testimonial />
+            {/* <RecentWork/> */}
+            {/* <Testimonial /> */}
         </div>
     );
 };

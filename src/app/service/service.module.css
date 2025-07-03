@@ -1,0 +1,546 @@
+.bannerMain {
+  background-color: #f4f4f4;
+  margin-top: 100px;
+  height: 812px;
+  display: flex;
+  align-items: center;
+  @media (max-width: 1500px) {
+    margin-top: 90px;
+    height: 700px;
+  }
+  @media (max-width: 1300px) {
+    height: 600px;
+  }
+  @media (max-width: 1023px) {
+    margin-top: 80px;
+  }
+  @media (max-width: 767px) {
+    margin-top: 60px;
+    height: 750px;
+  }
+}
+.bannerContent {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 50px 30px 37px;
+  @media (max-width: 767px) {
+    padding: 50px 20px 37px;
+    height: auto;
+    flex-direction: column;
+    gap: 40px;
+  }
+  & .leftContent {
+    width: 55%;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+    & .bannerTitle {
+      font-family: Montserrat;
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 78.02px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      color: #0075f2;
+      margin: 0 0 30px;
+      @media (max-width: 1300px) {
+        font-size: 50px;
+        line-height: 60px;
+      }
+      @media (max-width: 1200px) {
+        font-size: 40px;
+        line-height: 50px;
+      }
+      @media (max-width: 1023px) {
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+    & .bannerDescription {
+      font-family: Montserrat;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24.38px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      color: #3e4348;
+      margin: 0 0 40px;
+      @media (max-width: 1023px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    & .bannerButton {
+      font-family: Montserrat;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 24.38px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      color: #0075f2;
+      padding: 13px 15px 15px 20px;
+      background-color: #ffffff;
+      border-radius: 26px;
+      border: none;
+      
+      display: flex;
+      gap: 3px;
+      align-items: center;
+      @media (max-width: 1023px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+  & .rightContent {
+    width: 45%;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+    & svg, & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.businessColumn {
+  text-align: center;
+  padding: 71px 0 80px;
+  .heading {
+    color: #0075f2;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48.76px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    margin-bottom: 20px;
+    @media (max-width: 1500px) {
+      font-size: 35px;
+      line-height: 45px;
+    }
+    @media (max-width: 1200px) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+
+  .description {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.38px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    color: #000000;
+    max-width: 1298px;
+    margin: 0 auto 80px;
+    @media (max-width: 1200px) {
+      font-size: 16px;
+      line-height: 20px;
+      margin: 0 20px 40px;
+    }
+  }
+
+  .servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+    row-gap: 60px;
+    @media (max-width: 1500px) {
+      gap: 24px;
+      row-gap: 24px;
+    }
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 580px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .serviceCard {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    @media (max-width: 1200px) {
+      padding: 20px;
+    }
+    &:hover{
+      box-shadow: 0px 10px 50px 0px #0000000F;
+      & .serviceTitle{
+        color: #0075F2;
+      }
+      & .serviceDescription{
+        color: #0075F2;
+      }
+    }
+  }
+
+  .serviceIcon {
+    margin-bottom: 40px;
+    @media (max-width: 1200px) {
+      margin-bottom: 20px;
+    }
+    & img{
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .serviceTitle {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.26px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    margin-bottom: 10px;
+    color: #242424;
+    @media (max-width: 1200px) {
+      font-size: 20px;
+      line-height: 34px;
+    }
+  }
+
+  .serviceDescription {
+    color: #242424;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.5px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
+.businessFeature {
+  text-align: center;
+  padding: 65px 0 40px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  & .mainContent {
+    display: flex;
+    gap: 58px;
+    @media (max-width: 1500px) {
+      gap: 24px;
+    }
+    @media (max-width: 1023px) {
+     flex-direction: column;
+    }
+    & .leftImage{
+      width: 41%;
+      @media (max-width: 1023px) {
+        width: 100%;
+        height: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+       }
+      & svg, & img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .heading {
+    color: #0075f2;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48.76px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    margin-bottom: 20px;
+    @media (max-width: 1500px) {
+      font-size: 35px;
+      line-height: 45px;
+    }
+    @media (max-width: 1200px) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+
+  .description {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.38px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    color: #000000;
+    margin: 0 auto 60px;
+    max-width: 1298px;
+    @media (max-width: 1200px) {
+      font-size: 16px;
+      line-height: 20px;
+      margin: 0 20px 40px;
+    }
+  }
+
+  .grid {
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-areas:
+      "first first first first second second second"
+      "third third third fourth fourth fourth fourth"
+      "fifth fifth fifth fifth sixth sixth sixth";
+    gap: 28px;
+    height: fit-content;
+    width: 57%;
+    @media (max-width: 1500px) {
+      gap: 20px;
+    }
+    @media (max-width: 1023px) {
+      width: 100%;
+     }
+    @media (max-width: 580px) {
+      grid-template-areas:
+      "first"
+      "second"
+      "third"
+      "fourth"
+      "fifth"
+      "sixth";
+     }
+  }
+
+  .card {
+    background: #ffffff;
+    padding: 25px 25px 31px;
+    border-radius: 12px;
+    box-shadow: 0px 12.75px 63.76px 0px #0000000f;
+
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+     @media (max-width: 1500px) {
+      padding: 20px;
+     }
+    &:nth-child(1) {
+      grid-area: first;
+    }
+    &:nth-child(2) {
+      grid-area: second;
+    }
+    &:nth-child(3) {
+      grid-area: third;
+    }
+    &:nth-child(4) {
+      grid-area: fourth;
+    }
+    &:nth-child(5) {
+      grid-area: fifth;
+    }
+    &:nth-child(6) {
+      grid-area: sixth;
+    }
+  }
+
+  .cardTitle {
+    font-family: Montserrat;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 31.69px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    color: #242424;
+    margin-bottom: 10px;
+    @media (max-width: 1500px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  .cardDescription {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.38px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    color: #242424;
+    @media (max-width: 1500px) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  .imageSection {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+    color: #007bff;
+  }
+}
+.whyChooseContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 112px 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='332' height='1074' viewBox='0 0 332 1074' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_3008_22305' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='332' height='1074'%3E%3Crect width='332' height='1074' transform='matrix(-1 0 0 1 332 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_3008_22305)'%3E%3Ccircle cx='413' cy='413' r='363' transform='matrix(-1 0 0 1 965 148.5)' stroke='%230075F2' stroke-width='100'/%3E%3Ccircle cx='537' cy='537' r='517' transform='matrix(-1 0 0 1 1074 0)' stroke='%230075F2' stroke-width='40'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right;
+  @media (max-width: 1500px) {
+    background-size: 300px;
+  }
+  @media (max-width: 1023px) {
+    background-size: 200px;
+  }
+  .title {
+    color: #0075f2;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48.76px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    margin-bottom: 20px;
+    @media (max-width: 1500px) {
+      font-size: 35px;
+      line-height: 45px;
+    }
+    @media (max-width: 1200px) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+  & .cardContent {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .description {
+    & p{
+      color: #000000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.38px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    max-width: 1298px;
+    margin: 0 auto 60px;
+    @media (max-width: 1200px) {
+      font-size: 16px;
+      line-height: 20px;
+      margin: 0 20px 40px;
+    }
+    }
+  }
+
+  .cardGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+    row-gap: 30px;
+    width: 100%;
+    @media (max-width: 1500px) {
+      gap: 20px;
+    }
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 580px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: left;
+    @media (max-width: 1500px) {
+      padding: 20px;
+    }
+  }
+
+  .cardIcon {
+    & svg, & img{
+      width: 100px;
+      height: 80px;
+      object-fit: cover;
+      @media (max-width: 1023px) {
+        width: 80px;
+        height: 70px;
+      }
+    }
+  }
+
+  .cardTitle {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.26px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    color: #000000;
+    @media (max-width: 1500px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @media (max-width: 1023px) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  .cardDescription {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.94px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    @media (max-width: 1500px) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    @media (max-width: 1023px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

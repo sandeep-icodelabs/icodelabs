@@ -1,0 +1,97 @@
+.formContainer {
+  background: linear-gradient(165.6deg, #1b1b1b 48.23%, #002f61 115.46%);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--borderRadius);
+  margin-top: 60px;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+
+  & h3 {
+    position: absolute;
+    top: 178px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: #fff;
+    text-align: center;
+    font-family: var(--font-instrumentSans);
+    width: 100%;
+    margin: auto;
+    font-weight: 700;
+  }
+
+  .ImgWrapper {
+    height: 260px;
+    width: 100%;
+    overflow: hidden;
+
+    .meetingImg {
+      width: 100%;
+      height: auto !important;
+    }
+  }
+
+  .formGroupWrapper {
+    padding: 0 30px;
+
+    @media (max-width: 992px) {
+      padding: 0 16px;
+    }
+
+    .formGroup {
+      & input,
+      & textarea {
+        width: 100%;
+        padding: 0;
+        background: transparent;
+        border-bottom: 1px solid #313e52;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        box-shadow: none;
+        margin-bottom: 30px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0.6px;
+        color: #fff;
+
+        &::placeholder {
+          font-family: var(--font-instrumentSans);
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          letter-spacing: 0.3px;
+          color: #ffffff80;
+        }
+
+        &:focus,
+        &:active,
+        &:focus-visible {
+          /* border: 0; */
+          outline: 0;
+          box-shadow: none;
+        }
+      }
+
+      & textarea {
+        height: 29px;
+        min-height: 29px;
+
+        @media (max-width: 992px) {
+          height: 100%;
+        }
+      }
+    }
+
+    .submitBtn {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+}

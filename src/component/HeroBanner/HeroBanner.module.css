@@ -1,0 +1,229 @@
+.heroBannerWrapper {
+  background-color: #1b1b1b;
+  margin: auto;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .glowbgLeft {
+    position: absolute;
+    width: 462px;
+    height: 710.77px;
+    background: #0075f2;
+    filter: blur(200px);
+    z-index: 1;
+    left: -20%;
+    top: -20%;
+
+    @media (max-width: 992px) {
+      width: 336px;
+      height: 335px;
+      filter: blur(140px);
+      top: 10px;
+      left: -230px;
+    }
+
+    @media (max-width: 600px) {
+      width: 286px;
+      height: 295px;
+    }
+  }
+
+  .glowbgRight {
+    position: absolute;
+    width: 462px;
+    height: 710.77px;
+    background: #0075f2;
+    filter: blur(200px);
+    z-index: 1;
+    right: -15%;
+    bottom: -25%;
+
+    @media (max-width: 992px) {
+      width: 336px;
+      height: 335px;
+      filter: blur(140px);
+      bottom: -140px;
+      right: -80px;
+    }
+
+    @media (max-width: 600px) {
+      width: 286px;
+      height: 295px;
+    }
+  }
+}
+
+.heroBannerContainer {
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 100%;
+  padding-top: 128px;
+  padding-bottom: 62px;
+  z-index: 5;
+  position: relative;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 71px;  */
+    height: 100vh;
+  }
+
+  .contentContainer {
+    & span {
+      font-family: var(--font-instrumentSans);
+      font-weight: 500;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      color: #ffffff;
+      padding: 0;
+      display: block;
+
+      @media (max-width: 1024px) {
+        text-align: center;
+        display: block;
+        font-size: 15px;
+        line-height: 24px;
+        margin-bottom: 10px;
+      }
+    }
+
+    & h1 {
+      /* H1 */
+      font-family: var(--font-instrumentSans);
+      color: #ffffff;
+      font-weight: 700;
+      max-width: 706px;
+      margin-bottom: 20px;
+      text-align: left;
+
+      @media (max-width: 1024px) {
+        margin: 0 auto;
+        text-align: center;
+        max-width: 540px;
+      }
+
+      @media (max-width: 600px) {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 36px;
+        line-height: 42.5px;
+      }
+    }
+
+    & h6 {
+      font-family: var(--font-instrumentSans);
+      font-weight: 400;
+      color: #ffffff;
+      margin-bottom: 30px;
+      max-width: 648px;
+
+      @media (max-width: 1024px) {
+        text-align: center;
+        max-width: 450px;
+        margin: 8px auto 20px;
+      }
+    }
+
+    & a {
+      & span {
+        margin: 0;
+      }
+
+      @media (max-width: 1024px) {
+        margin: 0 auto;
+        font-size: 17px;
+      }
+    }
+
+    & div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      /*  |  */
+      font-family: var(--font-inter);
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.3px;
+      color: #ffffff;
+      margin-top: 30px;
+
+      @media (max-width: 1024px) {
+        gap: 20px;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      & p {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-weight: 600;
+        color: var(--bg-cream);
+        margin-bottom: 0;
+        width: fit-content;
+
+        @media (max-width: 1024px) {
+          text-align: center;
+          width: fit-content;
+          font-weight: 500;
+          font-size: 14px !important;
+          line-height: 18px !important;
+
+          & svg {
+            display: none;
+          }
+        }
+      }
+
+      & .bar {
+        height: 22px;
+        width: 1px;
+        background-color: #fff;
+
+        @media (max-width: 600px) {
+          height: 42.2px;
+        }
+      }
+    }
+  }
+
+  & .heroBannerImg {
+    width: auto;
+    /* width: 618.77px; */
+    height: 610px;
+
+    @media (max-width: 1024px) {
+      margin: 30px auto 0;
+      display: block;
+      height: 490px;
+    }
+
+    @media (max-width: 600px) {
+      width: 320px;
+      height: auto;
+    }
+  }
+}
+
+.pointContainer {
+  display: flex;
+  justify-content: 10px;
+
+  & svg {
+    min-width: 24px;
+    height: 24px;
+    width: 24px;
+  }
+
+  & .bar:last-child {
+    display: none;
+  }
+}

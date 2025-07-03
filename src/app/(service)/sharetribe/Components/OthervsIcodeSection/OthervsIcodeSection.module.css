@@ -1,0 +1,99 @@
+.contentContainer {
+  margin-top: 80px;
+
+  @media (max-width: 600px) {
+    margin-top: 40px;
+  }
+
+  & h2 {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  & p {
+    text-align: center;
+    max-width: 608px;
+    margin: auto;
+  }
+}
+
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  margin-top: 52px;
+  margin-bottom: 80px;
+
+  @media (max-width: 600px) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  & .cardOne,
+  & .cardTwo {
+    background-color: #f9f9f9;
+    border-radius: var(--borderRadius);
+    overflow: hidden;
+    width: 397px;
+    height: 472px;
+    padding: 32px;
+
+    @media (max-width: 600px) {
+      width: 100%;
+      padding: 32px 38px;
+    }
+
+    & span {
+      font-weight: 500;
+      font-family: var(--font-instrumentSans);
+
+      @media (max-width: 600px) {
+        font-size: 16px;
+      }
+    }
+
+    & h4 {
+      margin-top: 16px;
+      font-family: var(--font-instrumentSans);
+
+      @media (max-width: 600px) {
+        font-size: 30px !important;
+        margin-top: 20px;
+      }
+    }
+
+    .pointWrapper {
+      margin-top: 20px;
+      .points {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        margin-left: 12px;
+      }
+    }
+  }
+
+  & .cardTwo {
+    background-color: #fff;
+    box-shadow: 0px 10px 20px rgba(0, 117, 242, 0.15);
+    border: 2px solid var(--primary-blue);
+
+    & h4 {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    & .pointWrapper {
+      & .points {
+        margin-left: 0;
+      }
+    }
+  }
+}

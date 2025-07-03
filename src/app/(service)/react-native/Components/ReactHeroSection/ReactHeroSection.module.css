@@ -1,0 +1,261 @@
+.heroBannerWrapper {
+  background-color: #2a2b2e;
+  margin: auto;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .glowbgLeft {
+    position: absolute;
+    width: 462px;
+    height: 710.77px;
+    background: #0075f2;
+    filter: blur(200px);
+    z-index: 1;
+    left: -20%;
+    top: -20%;
+
+    @media (max-width: 600px) {
+      width: 231px;
+      height: calc(710.77px / 2);
+    }
+  }
+
+  .glowbgRight {
+    position: absolute;
+    width: 462px;
+    height: 710.77px;
+    background: #0075f2;
+    filter: blur(200px);
+    z-index: 1;
+    right: -15%;
+    bottom: -25%;
+
+    @media (max-width: 600px) {
+      width: 231px;
+      height: calc(710.77px / 2);
+    }
+  }
+
+  .reactIconSmall {
+    position: absolute;
+    left: -45px;
+    bottom: 204.03px;
+    z-index: 10;
+
+    @media (max-width: 600px) {
+      left: -100%;
+    }
+
+    & svg {
+      width: 166px;
+      height: 187px;
+    }
+  }
+
+  .reactIconSmallRightTop {
+    position: absolute;
+    top: 24px;
+    right: -55.85px;
+    z-index: 10;
+
+    @media (max-width: 600px) {
+      right: -13px;
+      top: 70px;
+
+      & svg {
+        width: 57px;
+        height: 64px;
+      }
+    }
+  }
+
+  .reactIconSmallRightBottom {
+    position: absolute;
+    bottom: -17.09px;
+    right: -26.33px;
+    z-index: 10;
+
+    @media (max-width: 600px) {
+      right: 110px;
+      bottom: -27.4px;
+
+      & svg {
+        width: 79px;
+        height: 89px;
+      }
+    }
+  }
+
+  .contentNformRapper {
+    padding: 153px 0 84px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+      gap: 35px;
+    }
+
+    @media (max-width: 600px) {
+      padding: 101px 0 37px;
+    }
+
+    .contentContainer {
+      max-width: 648px;
+
+      & h1 {
+        color: #fff;
+        font-family: var(--font-instrumentSans);
+
+        @media (max-width: 600px) {
+          text-align: center;
+        }
+      }
+
+      & p {
+        margin-top: 20px;
+        color: #fff;
+        font-family: var(--font-inter);
+
+        @media (max-width: 600px) {
+          text-align: center;
+          margin-top: 10px;
+        }
+      }
+
+      & a {
+        margin-top: 30px;
+        display: inline-flex;
+
+        @media (max-width: 600px) {
+          margin: 20px auto 0;
+          width: fit-content;
+        }
+      }
+    }
+
+    .formContainer {
+      max-width: 439px;
+      background-color: #fff;
+      border-radius: var(--borderRadius);
+      border: 1px solid #d1d1d1;
+      padding: 30px;
+      position: relative;
+      z-index: 10;
+
+      @media (max-width: 992px) {
+        max-width: 100%;
+      }
+
+      @media (max-width: 600px) {
+        padding: 30px 20px;
+      }
+
+      & h4 {
+        color: var(--primary-dark);
+        font-family: var(--font-instrumentSans);
+        font-weight: 700;
+        text-align: center;
+
+        @media (max-width: 600px) {
+          font-size: 30px;
+          line-height: 38px;
+          text-align: center;
+        }
+      }
+
+      & p {
+        margin-top: 10px;
+        font-family: var(--font-instrumentSans);
+        text-align: center;
+      }
+
+      .heroFormStyling {
+        margin-top: 30px;
+
+        @media (max-width: 600px) {
+          margin-top: 21px;
+        }
+
+        & input[type="text"],
+        & input[type="email"],
+        & textarea,
+        & select {
+          border: 0;
+          border-bottom: 1px solid #949494;
+          width: 100%;
+          padding: 0 0 12px 0;
+          margin-bottom: 30px;
+          font-size: 16px;
+          font-weight: 400;
+          color: var(--primary-dark);
+          font-family: var(--font-inter);
+
+          &::placeholder {
+            color: #949494;
+            font-family: var(--font-inter);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+          }
+
+          &:active,
+          &:focus-visible,
+          &:focus {
+            outline: none;
+          }
+        }
+
+        & textarea {
+          @media (max-width: 600px) {
+            margin-bottom: 20px;
+          }
+        }
+
+        & select {
+          background-color: transparent;
+          color: var(--primary-dark);
+        }
+
+        & button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.btnDiv {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 10px;
+
+    & a {
+      width: 100%;
+    }
+  }
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.errorInput {
+  border-color: #ff0000 !important;
+}
+
+.errorMessage {
+  color: #ff0000;
+  font-size: 0.875rem;
+  margin-top: -0.75rem;
+  position: absolute;
+}

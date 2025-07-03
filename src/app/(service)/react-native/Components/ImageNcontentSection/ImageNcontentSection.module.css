@@ -1,0 +1,132 @@
+.mainWrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media (max-width: 600px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.imgNcontentContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .imgContainer {
+    display: flex;
+    gap: 27px;
+
+    @media (max-width: 600px) {
+      gap: 18px;
+    }
+
+    & img {
+      @media (max-width: 600px) {
+        width: 171px;
+        height: 373px;
+      }
+    }
+  }
+
+  .contentContainer {
+    max-width: 648px;
+
+    & h2 {
+      text-align: left;
+    }
+    & p {
+      margin-top: 20px;
+
+      @media (max-width: 600px) {
+        margin-top: 15px;
+      }
+    }
+
+    & a {
+      margin-top: 30px;
+    }
+  }
+}
+
+/* ------------------------------------ */
+
+.textnImgSectionWrapper {
+  background-color: #2a2b2e;
+  position: relative;
+  overflow: hidden;
+
+  .glowbgLeft {
+    position: absolute;
+    width: 462px;
+    height: 710.77px;
+    background: #0075f2;
+    filter: blur(200px);
+    z-index: 1;
+    left: -20%;
+    top: -20%;
+
+    @media (max-width: 600px) {
+      width: 230px;
+      height: 230px;
+      top: -30%;
+      left: -30%;
+      filter: blur(100px);
+    }
+  }
+
+  .glowbgRight {
+    position: absolute;
+    width: 462px;
+    height: 710.77px;
+    background: #0075f2;
+    filter: blur(200px);
+    z-index: 1;
+    right: -15%;
+    bottom: -25%;
+
+    @media (max-width: 600px) {
+      border-radius: 99rem;
+      width: 230px;
+      height: 230px;
+      bottom: -30%;
+      right: -30%;
+      filter: blur(100px);
+    }
+  }
+
+  .TextnImgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .contentContainer {
+      max-width: 648px;
+      z-index: 10;
+      position: relative;
+
+      & h2 {
+        text-align: left;
+        color: #fff;
+        & span {
+          color: var(--primary-blue);
+        }
+      }
+
+      & p {
+        color: #fff;
+        margin: 11px 0 30.82px;
+
+        @media (max-width: 600px) {
+          margin-top: 15px 0 20px;
+        }
+      }
+    }
+  }
+}

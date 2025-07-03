@@ -1,0 +1,253 @@
+.verifycBadge {
+  border: 1.38px solid #d1d1d1;
+  border-radius: var(--borderRadius);
+  background-color: #fff;
+  width: fit-content;
+  height: fit-content;
+  margin: 63px auto 52px;
+  display: flex;
+  align-items: center;
+  gap: 13.1px;
+  padding: 20px 26px;
+
+  @media (max-width: 600px) {
+    margin-top: 40px;
+  }
+
+  .contentNIconWrapper {
+    display: flex;
+    align-items: end;
+    gap: 7.37px;
+
+    .contentContainer {
+      & h5 {
+        color: #222222;
+        font-weight: 700;
+        font-size: 27.65px;
+        line-height: 100%;
+        font-family: var(--font-montserrat);
+      }
+
+      & p {
+        font-family: var(--font-montserrat);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16.5906px;
+        line-height: 20px;
+        text-transform: lowercase;
+        color: #222222;
+      }
+    }
+  }
+}
+
+.marketPlaceSectionWrapper {
+  .contentContainer {
+    & h2 {
+      margin-bottom: 15px;
+      font-weight: 700;
+      text-align: center;
+
+      @media (max-width: 600px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    & p {
+      max-width: 934px;
+      text-align: center;
+      margin: 0 auto;
+      color: #323e4f;
+
+      @media (max-width: 992px) {
+        padding: 0 24px;
+      }
+    }
+  }
+
+  .swiperCard {
+    padding: 32px;
+    height: 460px;
+    border-radius: var(--borderRadius);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 53px;
+
+    @media (max-width: 768px) {
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      height: 314px;
+    }
+
+    & .iconWrapper {
+      width: 60px;
+      height: 60px;
+      border-radius: 99rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    & h4 {
+      margin-top: 30px;
+      font-weight: 600;
+      font-family: var(--font-instrumentSans);
+
+      @media (max-width: 600px) {
+        margin-top: 20px;
+      }
+    }
+
+    & h6 {
+      margin-top: 20px;
+      font-weight: 400;
+      color: #222222;
+      font-family: var(--font-instrumentSans);
+      @media (max-width: 600px) {
+        margin-top: 10px;
+      }
+    }
+
+    & a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #fff;
+      color: var(--primary-dark);
+      padding: 10px 20px;
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 28px;
+      font-family: var(--font-montserrat);
+
+      & svg {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}
+
+.statsWrapper {
+  margin-top: 66.5px;
+
+  @media (max-width: 600px) {
+    margin-top: 40px;
+  }
+
+  & .statsContent {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    & h3 {
+      font-weight: 600;
+      max-width: 617px;
+      color: #949494;
+      font-family: var(--font-instrumentSans);
+      & span {
+        color: #1b1b1b;
+      }
+    }
+
+    & img {
+      object-fit: contain;
+      position: relative;
+      right: 260px;
+
+      @media (max-width: 1600px) {
+        right: 290px;
+      }
+
+      @media (max-width: 1460px) {
+        right: 260px;
+      }
+
+      @media (max-width: 1300px) {
+        right: 240px;
+      }
+
+      @media (max-width: 1030px) {
+        display: none;
+      }
+    }
+  }
+  & .statsContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 57px 0 80px 0;
+    margin-top: -58px;
+
+    @media (max-width: 992px) {
+      margin-top: 0;
+    }
+
+    @media (max-width: 600px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 40px;
+      padding: 0 0 40px;
+      row-gap: 24px;
+    }
+
+    .statBox {
+      flex: 1;
+      margin-left: 5%;
+
+      @media (max-width: 600px) {
+        text-align: center;
+        max-width: 164px;
+        margin: 0 auto;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-left: 160px;
+
+        @media (max-width: 992px) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .statValue {
+      font-family: var(--font-instrumentSans);
+      font-weight: 500;
+      font-size: 60px;
+      letter-spacing: 0.6px;
+      background: var(--primaryGradientText);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @media (max-width: 600px) {
+        font-size: 42px;
+      }
+    }
+
+    .statLabel {
+      font-family: var(--font-inter);
+    }
+  }
+}
+
+.bar {
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+
+.carouselWrapper {
+  @media (max-width: 600px) {
+    padding: 0 16px;
+  }
+}

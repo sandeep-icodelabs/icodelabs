@@ -1,0 +1,212 @@
+.howWeDriveSuccessfulContainer {
+  background-color: var(--primary-dark);
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media (max-width: 992px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  & .contentWrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    & h2 {
+      max-width: 648px;
+      color: #fff;
+      text-align: left;
+
+      @media (max-width: 992px) {
+        max-width: 100%;
+      }
+    }
+
+    & .textContainer {
+      max-width: 648px;
+
+      @media (max-width: 992px) {
+        max-width: 100%;
+      }
+
+      & h4 {
+        font-family: var(--font-instrumentSans);
+        color: #ffffff;
+
+        &:last-child {
+          margin-top: 30px;
+          font-weight: 600;
+          @media (max-width: 992px) {
+            display: none;
+          }
+        }
+
+        & span {
+          background: -webkit-linear-gradient(
+            0deg,
+            #f57258 0.02%,
+            #0075f2 99.07%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+
+  & .howWeDriveCarouselContainer {
+    margin-top: 49px;
+    width: 100%;
+    height: 512px;
+    background-image: url("../../assets/imgs/images/howWeDrive.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    padding: 40px 110px 40px 110px;
+
+    @media (max-width: 992px) {
+      /* rotate: 90deg; */
+      background-image: url(../../assets/imgs/images/howWeDriveVerticle.png);
+      padding: 76px 16px;
+      width: 345px;
+      height: 830px;
+      background-size: cover;
+      margin: 49px auto 0;
+    }
+
+    @media (max-width: 8px) {
+    }
+
+    & .imgNcontentContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+
+      @media (max-width: 992px) {
+        /* rotate: 90deg; */
+        grid-template-columns: 1fr;
+      }
+
+      & .carouselContent {
+        width: 100%;
+        min-height: 320px;
+
+        & h4 {
+          font-family: var(--font-instrumentSans);
+          font-weight: 600;
+          color: #ffffff;
+          @media (max-width: 992px) {
+            text-align: center;
+          }
+        }
+
+        & p {
+          font-weight: 500;
+          color: #ffffff;
+          margin-top: 20px;
+          width: 90%;
+          @media (max-width: 992px) {
+            text-align: center;
+          }
+        }
+
+        & a {
+          @media (max-width: 992px) {
+            margin: 25px auto 0;
+            display: block;
+          }
+        }
+      }
+
+      & .carouselImage {
+        width: auto;
+        height: 432px;
+        margin: auto;
+
+        @media (max-width: 992px) {
+          height: 100%;
+          width: 80%;
+          margin-top: 60px;
+        }
+
+        & .img {
+          width: 100%;
+          height: 100%;
+          scale: 1;
+
+          /* @media (max-width: 992px) {
+            scale: 1;
+          } */
+        }
+      }
+    }
+  }
+
+  & .checkPointsContainer {
+    display: grid;
+    margin-top: 80px;
+    margin-bottom: 4px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+
+    @media (max-width: 1500px) {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .checkpointDiv {
+      border-right: 1px solid #ffffff33;
+      padding-left: 30px;
+
+      @media (max-width: 992px) {
+        padding-left: 0;
+        border-right: 0;
+        border-bottom: 1px solid #ffffff33;
+        padding-bottom: 20px;
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        @media (max-width: 992px) {
+          margin-top: 20px;
+          border-bottom: 0;
+        }
+      }
+
+      & span {
+        width: 32px;
+        height: 32px;
+      }
+
+      & h5 {
+        display: block;
+        font-family: var(--font-instrumentSans);
+        color: #fff;
+        font-weight: 600;
+        margin-top: 20px;
+        white-space: wrap;
+        max-width: 305px;
+
+        @media (max-width: 600px) {
+          max-width: 147px;
+        }
+      }
+    }
+  }
+}

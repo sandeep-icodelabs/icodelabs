@@ -1,0 +1,101 @@
+.mainWrapper {
+  padding-top: 80px;
+
+  @media (max-width: 600px) {
+    padding-top: 40px;
+  }
+}
+.contentWrapper {
+  z-index: 10;
+  position: relative;
+  text-align: center;
+  max-width: 913px;
+  margin: auto;
+
+  &:after {
+    content: "";
+    background: url("../../../assets/imgs/images/perkNbenfitstextbg.svg")
+      no-repeat center;
+    background-size: contain;
+    width: 553px;
+    height: 434px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  & h2 {
+    margin: 40px 0 20px;
+  }
+
+  & h4 {
+    font-family: var(--font-instrumentSans);
+    font-weight: 400;
+  }
+  & h5 {
+    font-family: var(--font-instrumentSans);
+    margin-top: 46px;
+    font-weight: 500;
+    text-align: center;
+    color: #222222;
+  }
+}
+
+.pointsWrapper {
+  margin-top: 62px;
+  & .yBorder {
+    border-bottom: 1px solid var(--borderColor);
+    width: 100%;
+
+    &:first-child {
+      border-top: 1px solid var(--borderColor);
+    }
+
+    & .rowContainer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      .pointCard {
+        padding-top: 52px;
+        padding-bottom: 52px;
+        height: 391px;
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        flex-direction: column;
+
+        border-right: 1px solid var(--borderColor);
+        &:nth-child(3) {
+          border-right: 0;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          padding-left: 40px;
+        }
+
+        .imgWrapper {
+          margin-left: auto;
+          margin-right: 52px;
+          width: 40px;
+          height: 40px;
+          display: inline;
+        }
+        & h5 {
+          margin-top: 80px;
+          color: #222222;
+          font-family: var(--font-instrumentSans);
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+        & p {
+          max-width: 400px;
+          color: #424242;
+        }
+      }
+    }
+  }
+}

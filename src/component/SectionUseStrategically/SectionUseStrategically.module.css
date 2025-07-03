@@ -1,0 +1,270 @@
+.strategicallyWrapper {
+  padding: 80px 0px;
+
+  @media (max-width: 1024px) {
+    padding: 60px 0px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 0px;
+  }
+
+  & .strategicallyHeading {
+    font-family: var(--font-instrumentSans);
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 54.5px;
+    letter-spacing: 0.6px;
+    text-align: center;
+    margin-bottom: 52px;
+    color: var(--primary-dark);
+
+    @media (max-width: 1024px) {
+      font-size: 35px;
+      line-height: 44.5px;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 30px;
+      line-height: 38.5px;
+    }
+
+    @media (max-width: 600px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  & .strategicallyContainer {
+    display: flex;
+    gap: 100px;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    & .leftStrategically {
+      width: 50%;
+
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+
+      & .leftStrategicallyHeading {
+        font-family: var(--font-instrumentSans);
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.3px;
+        margin-bottom: 20px;
+        color: var(--primary-dark);
+        text-align: left;
+      }
+
+      & .leftStrategicallyDescription {
+        font-family: var(--font-inter);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.3px;
+        margin-bottom: 30px;
+        color: var(--primary-dark);
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+          line-height: 16px;
+        }
+
+        @media (max-width: 600px) {
+          margin-bottom: 37px;
+        }
+      }
+
+      & .techPurposeBox {
+        & .techPurposeContainer {
+          display: flex;
+          gap: 15px;
+          margin-bottom: 30px;
+
+          @media (max-width: 600px) {
+            margin-bottom: 37px;
+          }
+
+          & svg {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            margin-top: 3.5px;
+          }
+
+          & .purposeWrapper {
+            & .purposeheading {
+              font-family: var(--font-instrumentSans);
+              font-weight: 600;
+              font-size: 20px;
+              text-align: left;
+              line-height: 28px;
+              letter-spacing: 0.6px;
+              color: var(--primary-blue);
+              margin-bottom: 15px;
+
+              @media (max-width: 1024px) {
+                text-align: left;
+              }
+            }
+
+            & .purposeDescription {
+              font-family: var(--font-inter);
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              letter-spacing: 0.3px;
+              color: var(--primary-dark);
+
+              @media (max-width: 768px) {
+                font-size: 14px;
+                line-height: 16px;
+              }
+            }
+          }
+        }
+      }
+
+      & .borderLine {
+        border-bottom: 1px solid #e5e5e5;
+        margin-top: 6px;
+        margin-bottom: 20px;
+
+        @media (max-width: 600px) {
+          margin-top: 7px;
+        }
+      }
+
+      & .ourTeamContainer {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 1024px) {
+          justify-content: space-between;
+        }
+        @media (max-width: 576px) {
+          flex-direction: column;
+        }
+        & .ourTeamBox {
+          & .ourTeamHeading {
+            font-family: var(--font-instrumentSans);
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: 0.3px;
+            width: 80%;
+            color: var-(var(--primary-dark));
+
+            @media (max-width: 768px) {
+              font-size: 20px;
+            }
+
+            @media (max-width: 576px) {
+              width: 100%;
+            }
+          }
+        }
+
+        .outTeamButtonWrapper {
+          .ourTeamButton {
+            background: var(--primary-dark);
+            color: #fff;
+            border: none;
+            height: 48px;
+            border-radius: 10px;
+            font-family: var(--font-inter);
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 24px;
+            letter-spacing: 0.3px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 0 16px;
+            width: fit-content;
+            max-width: 100%;
+            white-space: nowrap;
+
+            @media (max-width: 1200px) {
+              padding: 8px 22px;
+            }
+
+            @media (max-width: 992px) {
+              padding: 8px 18px;
+            }
+
+            @media (max-width: 768px) {
+              padding: 6px 16px;
+              font-size: 14px;
+            }
+          }
+
+          .teamButtonImgWrapper {
+            display: flex;
+            align-items: center;
+
+            & img {
+              width: 22px;
+              height: 22px;
+              border-radius: 50%;
+              border: 2px solid var-(var(--primary-dark));
+              margin-left: -8px;
+
+              &:first-child {
+                margin-left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & .rightStrategically {
+      width: 50%;
+      height: 478px;
+      border: 1px solid #e5e5e5;
+
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.desktopHide {
+  display: none;
+
+  @media (max-width: 992px) {
+    display: block;
+  }
+}
+
+.mobileHide {
+  display: block;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
+}
+
+& .rightStrategically {
+  width: 50%;
+  height: 478px;
+  border-radius: var(--borderRadius);
+  border: 1px solid #e5e5e5;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    height: 300px;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,104 @@
+.clientCollaborationWrapper {
+  & .clientCollaborationHeading {
+    font-family: var(--font-instrumentSans);
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 54.5px;
+    letter-spacing: 0.6px;
+    text-align: center;
+    margin-bottom: 52px;
+    color: #1b1b1b;
+
+    @media (max-width: 1024px) {
+      font-size: 35px;
+      line-height: 44.5px;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 30px;
+      line-height: 38.5px;
+    }
+  }
+
+  & .clientCollaborationContainer {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    & .leftClientColloboration {
+      width: 50%;
+      border: 1px solid #e5e5e5;
+      height: 478px;
+      border-radius: var(--borderRadius);
+
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+
+    & .rightClientColloboration {
+      width: 50%;
+
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+
+      & .rightClientHeading {
+        font-family: var(--font-instrumentSans);
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.3px;
+        margin-bottom: 20px;
+        color: #1b1b1b;
+      }
+
+      & .rightClientDescription {
+        font-family: var(--font-inter);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.3px;
+        margin-bottom: 33px;
+        color: #1b1b1b;
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+
+      & .listingDataWrapper {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+
+        & svg {
+          width: 20px;
+          height: 20px;
+        }
+
+        & .listingTitle {
+          font-family: var(--font-inter);
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 28px;
+          letter-spacing: 0.6px;
+          color: var(--primary-dark);
+
+          @media (max-width: 600px) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}

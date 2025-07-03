@@ -1,0 +1,43 @@
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 6px 0px #3D3D3D1A;
+  padding: 16px 16px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &:hover{
+    box-shadow: 0px 0px 15px #0075f242;
+  }
+  & img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    aspect-ratio: 508 / 300;
+  }
+
+  & .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  & .cardTitle {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.26px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    color: #0075f2;
+    margin: 30px 0 0;
+    @media (max-width: 1300px) {
+      font-size: 20px;
+    }
+    @media (max-width: 580px) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}

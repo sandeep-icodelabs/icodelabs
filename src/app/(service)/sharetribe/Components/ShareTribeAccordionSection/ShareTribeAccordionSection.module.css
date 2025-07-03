@@ -1,0 +1,182 @@
+.bgWrapper {
+  background-color: var(--secondary-boldBlue);
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media (max-width: 600px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .glowbgLeft {
+    position: absolute;
+    width: 462px;
+    height: 710.77px;
+    background: #0075f2;
+    filter: blur(200px);
+    z-index: 1;
+    left: -20%;
+    top: -20%;
+    @media (max-width: 600px) {
+      height: 360px;
+      top: -160px;
+      left: -170px;
+      border-radius: 99rem;
+    }
+  }
+
+  .glowbgRight {
+    position: absolute;
+    width: 462px;
+    height: 710.77px;
+    background: #0075f2;
+    filter: blur(200px);
+    z-index: 1;
+    right: -15%;
+    bottom: -25%;
+    @media (max-width: 600px) {
+      height: 360px;
+      bottom: -160px;
+      right: -170px;
+      border-radius: 99rem;
+    }
+  }
+}
+
+.contentWrapper {
+  z-index: 10;
+  position: relative;
+  color: #fff;
+  text-align: center;
+
+  & h2 {
+    max-width: 1100px;
+    margin: 0 auto 15px;
+    color: #fff;
+
+    @media (max-width: 600px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  & p {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+}
+
+.accordionWrapper {
+  z-index: 10;
+  position: relative;
+  max-width: 1250px;
+  margin: 52px auto 0;
+
+  @media (max-width: 600px) {
+    margin-top: 40px;
+  }
+
+  .accordionBox {
+    max-height: 102px;
+    background-color: #fff;
+    padding: 32px 40px;
+    border-radius: var(--borderRadius);
+    margin-bottom: 5px;
+    overflow: hidden;
+    transition: all ease-in-out 0.5s;
+
+    @media (max-width: 600px) {
+      padding: 20px;
+      height: fit-content;
+      max-height: 88px;
+    }
+
+    .titleNbtn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+
+      & h5 {
+        color: var(--primary-dark);
+        font-family: var(--font-instrumentSans);
+        font-weight: 600;
+        padding-left: 27px;
+
+        @media (max-width: 600px) {
+          padding-left: 0;
+        }
+      }
+
+      & svg {
+        @media (max-width: 600px) {
+          margin-left: 12px;
+          min-width: 30px;
+          min-height: 30px;
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+    .contentBox {
+      background-color: #edf2ff;
+      padding: 40px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+      opacity: 0;
+      display: none;
+      transition: all ease-in-out 0.6s;
+      margin-top: 40px;
+
+      @media (max-width: 600px) {
+        margin-top: 31px;
+        padding: 30px 20px;
+      }
+
+      & h5 {
+        color: var(--primary-blue);
+        font-weight: 600;
+        font-family: var(--font-instrumentSans);
+        margin-bottom: 50px;
+      }
+
+      & span {
+        color: var(--primary-dark);
+        font-weight: 600;
+        font-family: var(--font-instrumentSans);
+      }
+
+      & ul {
+        padding-left: 18px;
+        margin-top: 20px;
+
+        & li {
+          font-family: var(--font-instrumentSans);
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 35px;
+          letter-spacing: 0.3px;
+        }
+      }
+    }
+  }
+}
+
+.accordionWrapper {
+  & .openAccordionBox {
+    max-height: 600px;
+
+    @media (max-width: 600px) {
+      max-height: 1200px;
+    }
+  }
+
+  & .accordionBox {
+    & .contentBoxShow {
+      opacity: 1;
+      display: block;
+    }
+  }
+}

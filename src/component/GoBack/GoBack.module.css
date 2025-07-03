@@ -1,0 +1,21 @@
+.backContent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 74px;
+    cursor: pointer;
+    @media (max-width: 1500px) {
+      margin: 0 0 34px;
+    }
+    & .backText {
+      font-family: Montserrat;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 26.82px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+
+      color: #000;
+    }
+  }

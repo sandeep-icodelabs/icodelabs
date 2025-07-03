@@ -1,0 +1,48 @@
+.joinClub {
+  border: 1px solid var(--borderColor);
+  border-radius: var(--borderRadius);
+  padding: 52px;
+  width: 100%;
+  max-height: 500px;
+  /* ----- */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+
+  @media (max-width: 600px) {
+    margin-bottom: 40px;
+  }
+
+  .contentWrapper {
+    max-width: 503px;
+    & h2 {
+      color: #1b1b1b;
+      text-align: left;
+      max-width: 364px;
+    }
+
+    & p {
+      margin-top: 15px;
+    }
+
+    & button {
+      margin-top: 30px;
+    }
+  }
+
+  .imgWrapper {
+    max-width: 646px;
+    max-height: 396px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    & img {
+      border-radius: 10px;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}

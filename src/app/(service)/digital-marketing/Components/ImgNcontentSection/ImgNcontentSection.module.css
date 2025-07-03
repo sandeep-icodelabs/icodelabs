@@ -1,0 +1,395 @@
+.ImgNcontentSection {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media (max-width: 600px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.imgNcontentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .contentContainer {
+    max-width: 648px;
+
+    & h2 {
+      text-align: left;
+    }
+
+    & p {
+      margin-top: 20px;
+    }
+
+    & a {
+      margin-top: 30px;
+    }
+  }
+}
+
+.statsContainer {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 600px) {
+    margin-top: 40px;
+  }
+
+  .statsBox {
+    text-align: left;
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      padding-left: 70px;
+      border-left: 1px solid #e5e5e5;
+    }
+
+    & h2 {
+      text-align: left;
+    }
+    & p {
+      margin-top: 5px;
+      color: #949494;
+    }
+  }
+}
+
+/* ------------- EmpowerYourBusinessSection ------------ */
+.EmpowerYourBusinessSection {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #f9f9f9;
+
+  @media (max-width: 600px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .contentContainer {
+    & h2 {
+      margin: 0 auto;
+      text-align: center;
+      max-width: 975px;
+    }
+
+    & p {
+      max-width: 785px;
+      margin: 15px auto 0;
+      text-align: center;
+    }
+  }
+
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 20px;
+    margin-top: 41px;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+      margin-top: 30px;
+    }
+
+    & .gridItem {
+      border: 1px solid #e5e5e5;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: var(--borderRadius);
+
+      & h5 {
+        font-family: var(--font-instrumentSans);
+        font-weight: 600;
+        margin-top: 30px;
+      }
+
+      & p {
+        margin-top: 20px;
+        font-family: var(--font-inter);
+      }
+    }
+  }
+}
+
+/* ------------- Icodelasbs: Your All-in-One
+Digital Growth Partner ---------------------------- */
+
+.AllInOneSolnSectionWrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media (max-width: 600px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  /* SeoGrid.css */
+  .seoGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .seoCard {
+    min-height: 458px;
+    max-height: 506px;
+    border: 1px solid #e5e5e5;
+    background-color: #fff;
+    border-radius: var(--borderRadius);
+
+    &:nth-child(2) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+  }
+
+  .seoCardTop {
+    height: 300px;
+    border-bottom-left-radius: var(--borderRadius);
+    border-bottom-right-radius: var(--borderRadius);
+  }
+
+  .seoCardContent {
+    padding: 24px;
+  }
+
+  .seoTitle {
+    font-weight: 600;
+  }
+
+  .seoDescription {
+    margin-top: 10px;
+  }
+}
+
+/* ---------------- blank section --------------- */
+
+.blankSection {
+  background-color: #f3f3f6;
+  height: 750px;
+}
+
+/*  */
+
+.smartChoiceWrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media (max-width: 600px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .contentContainer {
+    & h2 {
+      & span {
+        color: var(--primary-blue);
+      }
+    }
+
+    & p {
+      text-align: center;
+      margin: 15px auto 0;
+    }
+  }
+
+  .cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: fit-content;
+    margin: 52px auto 0;
+    gap: 20px;
+
+    .cardOne {
+      background-color: #e5e5e5;
+      border-radius: var(--borderRadius);
+      border: 1px solid #e5e5e5;
+      width: 554px;
+      /* width: 100%; */
+      height: 574px;
+      padding: 69px 10px 10px;
+
+      & .innerCardContainer {
+        height: 300px;
+        width: 100%;
+        margin-top: 25px;
+        background-color: #ffffff;
+        border-radius: 5px;
+      }
+
+      & ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        & li {
+          padding-left: 14px;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .cardTwo {
+      width: 554px;
+      /* width: 100%; */
+      border-radius: var(--borderRadius);
+      padding: 0 10px 10px;
+      background-color: #fff;
+      border: 1px solid #e5e5e5;
+      height: 574px;
+      box-shadow: 0px 10px 20px rgba(0, 117, 242, 0.15);
+
+      .logoContainer {
+        display: flex;
+        align-items: center;
+        gap: 5.75px;
+        margin: 20px 0 16px 14px;
+
+        & h5 {
+          font-size: 23.68px;
+          font-weight: 600;
+          font-family: var(--font-instrumentSans);
+
+          & span {
+            color: var(--primary-blue);
+          }
+        }
+      }
+
+      & ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        & li {
+          padding-left: 14px;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          margin-bottom: 10px;
+        }
+      }
+
+      .innerCardContainer {
+        height: 300px;
+        width: 100%;
+        margin-top: 25px;
+        background: linear-gradient(180deg, #0075f2 0%, #1b1b1b 100%);
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+/* ------------ We Build for Today’s Traffic & Tomorrow’s Expansion --------------- */
+.WeBuildForTodayWrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media (max-width: 600px) {
+    padding-top: 480px;
+    padding-bottom: 480px;
+  }
+
+  .contentContainer {
+    & h2 {
+      max-width: 648px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    & p {
+      margin: 15px auto 0;
+      text-align: center;
+    }
+  }
+}
+
+.verticalTabWrapper {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  margin-top: 52px;
+
+  & .leftSection {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    border-right: 1px solid #e5e5e5;
+
+    & .itemBox {
+      margin-bottom: 30px;
+      display: flex;
+      align-items: start;
+      gap: 15px;
+      transition: all ease-in-out 0.3s;
+      cursor: pointer;
+
+      & .numberbox {
+        min-width: 32px;
+        width: 32px;
+        height: 32px;
+        background-color: #e5e5e5;
+        color: var(--primary-dark);
+        font-weight: 500;
+        border-radius: 99rem;
+        font-family: var(--font-instrumentSans);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      & .contentBox {
+        & h5 {
+          font-family: var(--font-instrumentSans);
+          font-weight: 500;
+        }
+
+        & p {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  & .rightSection {
+    padding-left: 118px;
+    .contentBox {
+      & h5 {
+        color: var(--primary-blue);
+        font-weight: 600;
+        font-family: var(--font-instrumentSans);
+      }
+
+      & p {
+        margin-top: 10px;
+      }
+    }
+
+    & img {
+      margin-top: 30px;
+      max-width: 803px;
+      width: 100%;
+      height: 488px;
+    }
+  }
+}
+
+& .activeState {
+  & .numberbox {
+    background-color: var(--primary-blue) !important;
+    color: #fff !important;
+  }
+
+  & .contentBox {
+    & h5 {
+      color: var(--primary-blue);
+    }
+  }
+}

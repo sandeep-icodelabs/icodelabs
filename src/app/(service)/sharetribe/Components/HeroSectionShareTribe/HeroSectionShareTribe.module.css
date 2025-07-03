@@ -1,0 +1,241 @@
+.heroBannerWrapper {
+  background-color: #000;
+  margin: auto;
+  width: 100%;
+  height: 1024px;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 992px) {
+    max-height: 810px;
+  }
+
+  @media (max-width: 992px) {
+    max-height: 780px;
+  }
+
+  .glowbgLeft {
+    position: absolute;
+    width: 462px;
+    height: 710.77px;
+    background: #0075f2;
+    filter: blur(200px);
+    z-index: 1;
+    left: -20%;
+    top: -20%;
+
+    @media (max-width: 992px) {
+      width: 460px;
+      height: 460px;
+    }
+
+    @media (max-width: 600px) {
+      width: 231px;
+      height: calc(710px / 2);
+    }
+  }
+
+  .glowbgRight {
+    position: absolute;
+    width: 462px;
+    height: 710.77px;
+    background: #0075f2;
+    filter: blur(200px);
+    z-index: 1;
+    right: -15%;
+    bottom: -25%;
+
+    @media (max-width: 992px) {
+      width: 320px;
+      height: 320px;
+    }
+
+    @media (max-width: 600px) {
+      width: 231px;
+      height: calc(710px / 2);
+    }
+  }
+}
+
+.heroBannerContainer {
+  margin-top: 146px;
+
+  @media (max-width: 600px) {
+    margin-top: 80px;
+  }
+
+  & .contentContainer {
+    color: #fff;
+    position: relative;
+    z-index: 10;
+
+    & .badge {
+      text-align: center;
+      width: fit-content;
+      height: fit-content;
+      padding: 7px 20px;
+      background-color: #151515;
+      border: 1px solid #ffffff1a;
+      border-radius: 99rem;
+      font-family: var(--font-inter);
+      display: block;
+      margin: 0 auto 25px;
+
+      @media (max-width: 600px) {
+        background-color: transparent;
+        border: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+        max-width: 294px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: 0.3px;
+        margin-bottom: 20px;
+      }
+    }
+
+    & h1 {
+      font-family: var(--font-instrumentSans);
+      text-align: center;
+      max-width: 1100px;
+      margin: 0 auto 30px;
+    }
+
+    & p {
+      font-size: 20px;
+      letter-spacing: 0.3px;
+      line-height: 28px;
+      font-weight: 400;
+      max-width: 927px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    & a {
+      display: block;
+      width: fit-content;
+      margin: 69px auto 20px;
+
+      @media (max-width: 992px) {
+        margin: 40px auto 20px;
+      }
+    }
+  }
+
+  & .pointContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 663px;
+    margin: auto;
+
+    & p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      font-weight: 300;
+      border-right: 1px solid #fff;
+      padding-right: 10px;
+      font-size: 16px;
+
+      @media (max-width: 600px) {
+        font-size: 14px;
+        line-height: 18px;
+        flex-direction: column;
+        width: 94px;
+        padding-right: 25px;
+        margin-right: 0;
+
+        & svg {
+          display: none;
+        }
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      & .highlight {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.outterWrapper {
+  & .imgsWrapper {
+    position: absolute;
+    bottom: -334px;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -0%);
+
+    @media (max-width: 992px) {
+      bottom: -110px;
+      width: 92%;
+    }
+
+    @media (max-width: 600px) {
+      bottom: -58px;
+    }
+
+    & img {
+      max-width: 1265px;
+      width: auto;
+      height: auto;
+
+      @media (max-width: 992px) {
+        margin: 0 auto;
+        display: inherit;
+      }
+
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.homerLocationSectionWrapper {
+  margin-top: 60.37px;
+
+  @media (max-width: 600px) {
+    margin-top: 20.48px;
+  }
+
+  & h6 {
+    font-weight: 700;
+    font-size: 21.5px;
+    line-height: 30.02px;
+    letter-spacing: -0.8px;
+    text-align: center;
+    margin-bottom: 26.35px;
+    color: #4a4a4a;
+
+    @media (max-width: 600px) {
+      font-size: 8.12px !important;
+      line-height: 8.57px !important;
+      letter-spacing: -0.23px !important;
+      margin-bottom: 6.93px;
+    }
+  }
+
+  .imgGridContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 992px) {
+      width: 86%;
+      margin: 0 auto;
+    }
+
+    & img {
+      width: 100%;
+      height: auto;
+      max-width: 1024.91px;
+    }
+  }
+}

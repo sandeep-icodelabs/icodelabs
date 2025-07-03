@@ -1,0 +1,25 @@
+.contentWidth {
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+  max-width: var(--max-width);
+  position: relative;
+
+  @media (min-width: 1024px) {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0;
+  }
+
+  @media (min-width: 1500px) {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+}

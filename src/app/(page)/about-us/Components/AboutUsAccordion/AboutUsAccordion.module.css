@@ -1,0 +1,50 @@
+.aboutUsAccordionWrapper {
+  @media (min-width: 993px) {
+    display: none;
+  }
+
+  .AccordionBox {
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: var(--borderRadius);
+    padding: 24px;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    & .headerNIcon {
+      margin-bottom: 15px;
+    }
+
+    & .headerNIcon,
+    & .textNIcon {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      cursor: pointer;
+
+      & h6 {
+        font-weight: 500;
+      }
+    }
+
+    & .contentBox {
+      transition: all ease-in-out 0.3s;
+      max-height: 0;
+      overflow: hidden;
+
+      & h6 {
+        color: #7d7d7d;
+        margin-top: 20px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.open {
+  max-height: 9999px !important;
+}

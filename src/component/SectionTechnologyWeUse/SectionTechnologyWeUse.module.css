@@ -1,0 +1,266 @@
+.tecnocontainer {
+  background-color: var(--creamColor);
+  padding-top: 80px;
+  padding-bottom: 0;
+
+  @media (max-width: 600px) {
+    padding-top: 40px;
+  }
+
+  & h2 {
+    color: #1b1b1b;
+  }
+
+  & p {
+    font-weight: 400;
+    text-align: center;
+    color: #1b1b1b;
+    margin: 15px auto 42px;
+
+    @media (min-width: 1400px) {
+      max-width: 753.75px;
+    }
+
+    @media (max-width: 600px) {
+      margin: 10px auto 22px;
+    }
+  }
+}
+.technoWrapper {
+  display: flex;
+  height: fit-content;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+
+  .accordionMenu {
+    flex: 1;
+    border-radius: var(--borderRadius) 0 0 var(--borderRadius);
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    background-color: var(--secondary-darkBlue);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    padding: 30px;
+
+    & .tabContent {
+      background-color: transparent;
+      width: 100%;
+      padding: 20px 30px;
+      border-radius: var(--borderRadius);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 5;
+      position: relative;
+
+      & h5 {
+        font-family: var(--font-instrumentSans);
+        color: #fff;
+        font-weight: 600;
+      }
+
+      & svg {
+        width: 16px;
+        height: 16px;
+        transition: all ease-in-out 0.3s;
+      }
+
+      &:hover {
+        background-color: var(--secondary-color);
+
+        & svg {
+          rotate: 45deg;
+        }
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 282px;
+      height: 305px;
+      background: #0075f2;
+      filter: blur(125px);
+      border-radius: 10px;
+      z-index: 1;
+      right: -10%;
+      bottom: -15%;
+    }
+  }
+
+  .accordionContent {
+    width: 50%;
+    flex: 1;
+    border: 1px solid var(--borderColor);
+    border-radius: 0 var(--borderRadius) var(--borderRadius) 0;
+    padding: 30px 10px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: start;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 252px;
+      height: 203.18px;
+      background: #0075f2;
+      filter: blur(300px);
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+
+      @media (max-width: 768px) {
+        width: calc(252px / 2);
+        height: calc(203.18px / 2);
+      }
+    }
+
+    .AccordionContentPointWrapper {
+      z-index: 5;
+      position: relative;
+      display: flex;
+      align-items: start;
+      gap: 17px;
+      margin-left: 70px;
+
+      @media (max-width: 992px) {
+        margin-left: 30px;
+      }
+      & svg {
+        min-width: 20px;
+        height: 20px;
+        margin-top: 2px;
+      }
+
+      & h6 {
+        font-weight: 600;
+        color: var(--primary-blue);
+      }
+
+      & p {
+        color: var(--primary-dark);
+        font-weight: 400;
+        margin: 0;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.technoContainer {
+  display: flex;
+  height: fit-content;
+}
+
+.technoWrapper {
+  & .accordionMenu {
+    & .activeTab {
+      background-color: var(--secondary-color);
+
+      & svg {
+        rotate: 45deg;
+      }
+    }
+  }
+}
+
+.tabCarouselWrapper {
+  display: none;
+  padding: 0;
+
+  @media (max-width: 600px) {
+    display: block;
+  }
+
+  .tabSwiper {
+    width: 100%;
+  }
+
+  .tabSlide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .tabCard {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    font-family: var(--font-instrumentSans);
+    border-radius: var(--borderRadius);
+    overflow: hidden;
+  }
+
+  .tabHeader {
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    font-family: var(--font-instrumentSans);
+    padding: 20px;
+  }
+
+  .tabContent {
+    padding: 20px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 282px;
+      height: 305px;
+      background: #0075f2;
+      filter: blur(300px);
+      border-radius: 10px;
+      border-radius: 10px;
+      z-index: 1;
+      right: -10%;
+      bottom: -15%;
+      opacity: 0.3;
+    }
+  }
+
+  .tabItem {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    z-index: 4;
+    position: relative;
+  }
+
+  .checkIcon {
+    /* color: #0070f3;
+    font-size: 18px; */
+    margin-right: 17px;
+    margin-top: 6px;
+  }
+
+  .itemInfo strong {
+    color: var(--primary-blue);
+    font-size: 16px;
+    text-align: left;
+  }
+
+  & .itemInfo p {
+    margin-top: 4px;
+    text-align: left;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 10px;
+    }
+  }
+}

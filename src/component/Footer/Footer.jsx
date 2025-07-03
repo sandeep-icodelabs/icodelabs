@@ -231,7 +231,7 @@ const marketplace = [
 
 const services = [
   { Slug: "shartirbe-development", SubTitle: "Shartirbe Development" },
-  { Slug: "ai-based-development", SubTitle: "AI Based Development" },
+  // { Slug: "ai-based-development", SubTitle: "AI Based Development" },
   {
     Slug: "react-native-app-development",
     SubTitle: "React Native App Development",

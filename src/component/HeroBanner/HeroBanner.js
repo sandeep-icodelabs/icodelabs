@@ -115,16 +115,16 @@ const heroSectionData = [
     features: ["50+ AI Text", "AI-driven dev team", "AI Task Force"],
     img: HeroImg1,
   },
-  {
-    topText: "AI-Enabled Marketplaces",
-    title: "Smarter Marketplaces Start Here Powered by AI",
-    subText: `Add AI superpowers to your platform — GPT-based listing assistants, personalized recommendations, smart search, and more, all built into your marketplace.`,
-    btnText: `Talk to an AI Strategist`,
-    emoji: "👋",
-    Arrow: true,
-    btnRoute: "/ai-based-development",
+  // {
+  //   topText: "AI-Enabled Marketplaces",
+  //   title: "Smarter Marketplaces Start Here Powered by AI",
+  //   subText: `Add AI superpowers to your platform — GPT-based listing assistants, personalized recommendations, smart search, and more, all built into your marketplace.`,
+  //   btnText: `Talk to an AI Strategist`,
+  //   emoji: "👋",
+  //   Arrow: true,
+  //   btnRoute: "/ai-based-development",
 
-    features: ["50+ AI Text", "AI-driven dev team", "AI Task Force"],
-    img: HeroImg1,
-  },
+  //   features: ["50+ AI Text", "AI-driven dev team", "AI Task Force"],
+  //   img: HeroImg1,
+  // },
 ];

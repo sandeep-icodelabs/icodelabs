@@ -1,3 +1,4 @@
+"use client";
 import HeroBanner from "@/component/HeroBanner/HeroBanner";
 import MarketplaceSection from "@/component/MarketplaceSection/MarketplaceSection";
 import SectionContactUs from "@/component/SectionContactUs/SectionContactUs";
@@ -7,9 +8,7 @@ import SectionTestimonials from "@/component/SectionTestimonials/SectionTestimon
 import DrivingtheNextWave from "@/component/SectionDrivingtheNextWave/SectionDrivingtheNextWave";
 import {
   blogDetail,
-  companyLogoDetails,
-  expProcesses,
-  serviceDetails,
+  companyLogoDetails, 
 } from "@/services/service";
 import css from "./LandingPage.module.css";
 import Loader from "@/component/Loader/Loader";

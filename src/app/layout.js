@@ -8,7 +8,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import Header from "@/component/Header/Header";
-import Footer from "@/component/Footer/Footer";
+// import Footer from "@/component/Footer/Footer";
 import CustomQueryProvider from "./react-query/CustomQueryProvider";
 
 const dmSans = DM_Sans({
@@ -65,7 +65,7 @@ export default function RootLayout({ children }) {
         <CustomQueryProvider>
           <Header />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </CustomQueryProvider>
       </body>
     </html>

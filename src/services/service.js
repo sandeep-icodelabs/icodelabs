@@ -56,7 +56,7 @@ export const blog = async () => {
 };
 
 export const blogDetail = async () => {
-  return await http.get(`/articles?pagination[pageSize]=200&populate=*`);
+  return await http.get(`/articles?populate=*`);
 };
 
 export const singleBlogDeatail = async (id) => {

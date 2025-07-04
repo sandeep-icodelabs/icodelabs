@@ -1,4 +1,3 @@
-"use client";
 import HeroBanner from "@/component/HeroBanner/HeroBanner";
 import MarketplaceSection from "@/component/MarketplaceSection/MarketplaceSection";
 import SectionContactUs from "@/component/SectionContactUs/SectionContactUs";

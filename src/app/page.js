@@ -5,14 +5,11 @@ import SectionResources from "@/component/SectionResources/SectionResources";
 import SectionTechnologyWeUse from "@/component/SectionTechnologyWeUse/SectionTechnologyWeUse";
 import SectionTestimonials from "@/component/SectionTestimonials/SectionTestimonials";
 import DrivingtheNextWave from "@/component/SectionDrivingtheNextWave/SectionDrivingtheNextWave";
-import {
-  blogDetail,
-  companyLogoDetails, 
-} from "@/services/service";
+import { blogDetail, companyLogoDetails } from "@/services/service";
 import css from "./LandingPage.module.css";
 import Loader from "@/component/Loader/Loader";
 import DoBusinessBetter from "@/component/DoBusinessBetter/DoBusinessBetter";
-import HowWeDriveSuccessful from "@/component/HowWeDriveSuccessful /HowWeDriveSuccessful";
+import HowWeDriveSuccessful from "@/component/HowWeDriveSuccessful/HowWeDriveSuccessful";
 import SectionCaseStudy from "@/component/SectionCaseStudy/SectionCaseStudy";
 import WhyChooseUs from "@/component/SectionWhyChooseUs/SectionWhyChooseUs";
 import SectionHowItWork from "@/component/SectionLatestWorks/SectionHowItWork";
@@ -23,14 +20,12 @@ import AIDevelopmentPartner from "@/component/CompaniesSlider/SectionAIDevelopme
 export default async function Home() {
   try {
     const [blogDetailData, companyLogo] = await Promise.all([
-      blogDetail(),
-      companyLogoDetails(),
+      blogDetail().catch(() => ({ data: { data: [] } })),
+      companyLogoDetails().catch(() => ({ data: { data: [] } })),
     ]);
-    const sortedBlogDetail = blogDetailData?.data?.data?.sort(
-      (a, b) => b.id - a.id
-    );
-    console.log('sortedBlogDetail', sortedBlogDetail);
-    console.log('companyLogo', companyLogo);
+    const sortedBlogDetail = blogDetailData?.data?.data?.length
+      ? blogDetailData.data.data.sort((a, b) => b.id - a.id)
+      : [];
     return (
       <div className={css.landingContainer}>
         <HeroBanner />
@@ -44,13 +39,9 @@ export default async function Home() {
         <SectionHowItWork />
         <SectionGrowYour />
         <SectionTestimonials />
-        <StartupsToEnterprises companyLogo={companyLogo?.data?.data} />
+        <StartupsToEnterprises companyLogo={companyLogo?.data?.data || []} />
         <AIDevelopmentPartner />
-        <SectionResources
-          usedInBlog="false"
-          bg="#fff"
-          blog={sortedBlogDetail}
-        />
+        <SectionResources usedInBlog="false" bg="#fff" blog={sortedBlogDetail} />
         <SectionContactUs />
       </div>
     );

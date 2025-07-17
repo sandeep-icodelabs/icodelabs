@@ -1,56 +1,51 @@
+// Assuming API endpoints:
+// - Single blog: /api/blogs/:id
+// - Recent blogs: /api/blogs
+
 import BlogDetailsClient from "@/component/BlogDetailClient/BlogDetailClient";
-import { singleBlogDeatail, blogDetail } from "@/services/service";
 
 // Generate dynamic metadata
 export async function generateMetadata({ params }) {
-  const id = params?.id;
   try {
-    const resp = await singleBlogDeatail(id);
-    const blog = resp?.data?.data;
+    if (!params?.id) {
+      throw new Error("Missing blog ID");
+    }
 
-    if (!blog) {
+    const response = await fetch(`https://api.icodestaging.in/api/articles/${params.id}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        // Authorization: `Bearer ${process.env.API_TOKEN}`, // Uncomment if needed
+      },
+      cache: "no-store",
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`Failed to fetch blog data: ${response.status} ${errorText}`);
+    }
+
+    const { data: { data: blog } = {} } = await response.json();
+
+    if (!blog?.attributes) {
       return {
         title: "Blog Not Found | iCode Labs",
         description: "The requested blog post could not be found.",
       };
     }
 
-    const title = blog.attributes?.Title || "Blog Post | iCode Labs";
-    const description =
-      blog.attributes?.metaDescription ||
-      blog.attributes?.Content?.slice(0, 160) ||
-      "Read the latest insights from iCode Labs on custom web development and more.";
-    const keywords =
-      blog.attributes?.metaKeywords ||
-      "web development, custom software, ecommerce development, iCode Labs";
-
     return {
-      title,
-      description,
-      keywords,
-      // openGraph: {
-      //   title,
-      //   description,
-      //   url: `https://yourdomain.com/blog/${params?.slug}/${id}`,
-      //   type: "article",
-      //   images: [
-      //     {
-      //       url: blog.attributes?.Image?.data?.[0]?.attributes?.url || "",
-      //       width: 1000,
-      //       height: 400,
-      //       alt: blog.attributes?.Title || "Blog Image",
-      //     },
-      //   ],
-      // },
-      // twitter: {
-      //   card: "summary_large_image",
-      //   title,
-      //   description,
-      //   images: [blog.attributes?.Image?.data?.[0]?.attributes?.url || ""],
-      // },
+      title: blog.attributes?.Title || "Blog Post | iCode Labs",
+      description:
+        blog.attributes?.metaDescription ||
+        blog.attributes?.Content?.slice(0, 160) ||
+        "Read the latest insights from iCode Labs on custom web development and more.",
+      keywords:
+        blog.attributes?.metaKeywords ||
+        "web development, custom software, ecommerce development, iCode Labs",
     };
   } catch (error) {
-    console.error("Error generating metadata:", error);
+    console.error("Error generating metadata:", error.message);
     return {
       title: "Blog Not Found | iCode Labs",
       description: "The requested blog post could not be found.",
@@ -59,20 +54,57 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function BlogDetails({ params }) {
-  const id = params?.id;
-
-  // Fetch blog data for the page
-  let blogData = null;
-  let recentBlogs = [];
   try {
-    const blogResp = await singleBlogDeatail(id);
-    blogData = blogResp?.data?.data || null;
+    if (!params?.id) {
+      throw new Error("Missing blog ID");
+    }
 
-    const recentResp = await blogDetail();
-    recentBlogs = recentResp.data.data || [];
+    // Fetch single blog post
+    const blogResponse = await fetch(`https://api.icodestaging.in/api/articles/${params.id}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        // Authorization: `Bearer ${process.env.API_TOKEN}`, // Uncomment if needed
+      },
+      cache: "no-store",
+    });
+
+    if (!blogResponse.ok) {
+      const errorText = await blogResponse.text();
+      throw new Error(`Failed to fetch single blog data: ${blogResponse.status} ${errorText}`);
+    }
+
+    const singleBlog = await blogResponse.json();
+    // console.log('singleBlog', singleBlog)
+
+    // Fetch recent blogs
+    const recentResponse = await fetch(`https://api.icodestaging.in/api/articles`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        // Authorization: `Bearer ${process.env.API_TOKEN}`, // Uncomment if needed
+      },
+      cache: "no-store",
+    });
+
+    if (!recentResponse.ok) {
+      const errorText = await recentResponse.text();
+      throw new Error(`Failed to fetch recent blogs: ${recentResponse.status} ${errorText}`);
+    }
+
+    const recentBlogs = await recentResponse.json();
+
+    console.log('recentBlogs', recentBlogs)
+
+    return (
+      <BlogDetailsClient
+        blogData={singleBlog?.data || null}
+        recentBlogs={recentBlogs?.data || []}
+        params={params}
+      />
+    );
   } catch (error) {
-    console.error("Error fetching blog data:", error);
+    console.error("Error fetching blog data:", error.message);
+    return <BlogDetailsClient blogData={null} recentBlogs={[]} params={params} />;
   }
-
-  return <BlogDetailsClient blogData={blogData} recentBlogs={recentBlogs} params={params} />;
 }
